@@ -9,10 +9,16 @@ class Widget : public QWidget {
   explicit Widget(QWidget* parent = 0);
   virtual ~Widget();
 
+ protected:
+  void paintEvent(QPaintEvent*) override;
+
  private:
   void addImage(QString path);
   void addLabel(QString text);
   void createChildElements();
+  void drawOnImage();
+
+  QImage* image;
 };
 
 #endif  // WIDGET_H
