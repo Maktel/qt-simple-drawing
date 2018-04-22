@@ -8,11 +8,7 @@ class MainWindow : public QMainWindow {
 
  public:
   explicit MainWindow(QWidget* parent = 0);
-  ~MainWindow();
-
- private:
-  void addImage();
-  void addLabel(QString text);
+  virtual ~MainWindow();
 };
 
 #endif  // MAINWINDOW_H
