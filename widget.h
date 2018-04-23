@@ -9,6 +9,9 @@ class Widget : public QWidget {
   explicit Widget(QWidget* parent = 0);
   virtual ~Widget();
 
+ public slots:
+  void animate();
+
  protected:
   void paintEvent(QPaintEvent*) override;
 
@@ -17,6 +20,9 @@ class Widget : public QWidget {
   void addLabel(QString text);
   void createChildElements();
   void drawOnImage();
+
+  void createTimer();
+  QTimer* timer;
 
   QImage* image;
 };
